@@ -1,0 +1,13 @@
+import { configureStore } from '@reduxjs/toolkit'
+import tokenReducer from '../features/token/tokenSlice'
+
+
+const store = configureStore({
+    reducer: {
+    token: tokenReducer
+}
+})
+
+export default store;
+
+export type RootState = ReturnType<typeof store.getState>;
